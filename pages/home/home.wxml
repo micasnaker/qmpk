@@ -1,5 +1,16 @@
 <view class='home'>
-
+  <!-- 定位 -->
+  <view class="home_position">
+    <view class="p_left">
+      <i-icon type="coordinates_fill" size="28" />
+      <view class="p_address">当前定位
+        <view>武汉市</view>
+      </view>
+    </view>
+    <view class="p_right">
+      <i-button i-class="p_btn" size="small" bind:click="handleClick" type="ghost">重新定位</i-button>
+    </view>
+  </view>
   <!-- 轮播图 -->
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{bannerList}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}">
