@@ -1,40 +1,68 @@
 /* pages/home/home.wxss */
+
 /* 轮播图部分 */
+
 swiper {
-    height: 180rpx;
-    width: 100%;
-    text-align: center;
-}
-swiper-item image {
-    width: 96%;
-    height: 96%;
-    border-radius: 100rpx;
-    margin: 2% 2%;
+  height: 180rpx;
+  width: 100%;
+  text-align: center;
 }
 
-.home_position{
+swiper-item image {
+  width: 96%;
+  height: 96%;
+  border-radius: 100rpx;
+  margin: 2% 2%;
+}
+
+.home_position {
   display: flex;
   justify-content: space-between;
   height: 90rpx;
+  line-height: 90rpx;
+  width: 92%;
+  margin: auto;
 }
 
-.home_position i-icon{
+.home_position i-icon {
   line-height: 90rpx;
 }
 
-.p_address{
+.p_address {
   display: flex;
   justify-content: space-evenly;
   line-height: 90rpx;
 }
 
-.p_left{
+.p_address view:first-child {
+  padding-right: 20rpx;
+  color: rgb(168, 164, 164);
+  font-size: 30rpx;
+}
+
+.p_address view:last-child {
+  font-weight: 500;
+  font-size: 30rpx;
+  color: #000;
+}
+
+.p_left {
   display: flex;
   justify-content: space-evenly;
 }
 
-.p_btn{
-  border-radius: 60rpx !important;
-  border: lightsalmon !important;
-  color: lightsalmon !important;
+.p_right {
+  margin-top: 20rpx;
+}
+
+button::after {
+  border: none;
+}
+
+.p_btn {
+  border-radius: 60rpx;
+  border: 1px solid lightsalmon;
+  color: lightsalmon;
+  height: 60rpx;
+  font-size: 25rpx;
 }

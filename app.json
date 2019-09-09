@@ -8,10 +8,15 @@
     "pages/person/personInfo/personInfo",
     "pages/person/set/set"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "土木金华",
+    "navigationBarTitleText": "全民拼课",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

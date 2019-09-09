@@ -2,13 +2,21 @@
   <!-- 定位 -->
   <view class="home_position">
     <view class="p_left">
-      <i-icon type="coordinates_fill" size="28" />
-      <view class="p_address">当前定位
-        <view>武汉市</view>
+      <i-icon type="coordinates_fill" size="28" color="lightsalmon" />
+      <view class="p_address">
+        <view>当前定位</view>
+        <!-- piker 地区二级联动选择器 -->
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <!-- 当前选择 -->
+          <view>
+            {{multiArray[1][multiIndex[1]]}}
+            <i-icon type="unfold" />
+          </view>
+        </picker>
       </view>
     </view>
     <view class="p_right">
-      <i-button i-class="p_btn" size="small" bind:click="handleClick" type="ghost">重新定位</i-button>
+      <button class="p_btn" bindtap="tryPosition">重新定位</button>
     </view>
   </view>
   <!-- 轮播图 -->
