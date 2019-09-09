@@ -1,0 +1,12 @@
+<view class='home'>
+
+  <!-- 轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{bannerList}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}">
+      <swiper-item>
+        <image src="{{item.path}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+</view>
