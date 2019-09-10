@@ -13,10 +13,11 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
+    // 定位初始值
     multiIndex: [0, 0],
     multiArray: [
       ['北京', '安徽', "福建", "甘肃", "广东", "广西", "贵州", "海南", "河北", "河南", "黑龙江", "湖北", "湖南", "吉林", "江苏", "江西", "辽宁", "内蒙古", "宁夏", "青海", "山东", "山西", "陕西", "上海", "四川", "天津", "西藏", "新疆", "云南", "浙江", "重庆", "香港", "澳门", "台湾"],
-      ['北京']
+      [wx.getStorageSync('city'), '北京']
     ],
     objectMultiArray: [{
       "regid": "2",
@@ -2419,13 +2420,19 @@ Page({
     that = this
     // 首页banner
     this.getHomeBanners();
+    // 定位权限
+    this.getLocation();
+  },
+
+  // 获取定位权限
+  getLocation() {
     // 获取当前地理位置，需要用户授权
     wx.getLocation({
       type: "wgs84",
       altitude: true,
       success: function(res) {
         console.log("wx.getLocation......");
-        console.log(res);
+        // console.log(res);
         if (res && res.latitude && res.longitude) {
           var longitude = res.longitude, // 经度
             latitude = res.latitude; // 纬度
@@ -2467,7 +2474,6 @@ Page({
             city: city.indexOf('市') > -1 ? city.substr(0, city.indexOf('市')) : city,
             province: province.indexOf('省') > -1 ? province.substr(0, province.indexOf('省')) : province,
           });
-          var a = that.data.multiArray[1]
           // 省下标
           // for (var j = 0; j < that.data.multiArray[0].length; j++) {
           //   // console.log(that.data.multiArray[0][j])
@@ -2478,9 +2484,30 @@ Page({
           //     })
           //   }
           // }
-          // 写到这了
-          console.log([a.splice(0, 0, that.data.city)] + that.data.city)
-          console.log(that.data.city + "city")
+
+          // wx.setStorage({
+          //   key: "city",
+          //   data: that.data.city
+          // })
+          try {
+            wx.setStorageSync('city', that.data.city)
+          } catch (e) {
+            // 请重新获取定位
+            wx.showModal({
+              title: '获取定位失败',
+              content: '请重新获取定位',
+              success(res) {
+                if (res.confirm) {
+                  console.log('确定')
+                  // 重新获取定位
+                  this.loadCity();
+                } else if (res.cancel) {
+                  console.log('取消')
+                }
+              }
+            })
+          }
+          console.log("定位城市：" + that.data.city)
         } else {
           that.setData({
             city: '获取失败'
@@ -2491,7 +2518,8 @@ Page({
   },
 
   tryPosition: function() {
-    // 重新获取定位
+    // 重新获取定位  必须要让getLocation和loadCity一起触发，才能获取
+    this.getLocation();
     this.loadCity();
   },
 
