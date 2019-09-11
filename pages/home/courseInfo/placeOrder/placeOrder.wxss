@@ -15,7 +15,7 @@
   display: flex;
   width: 90%;
   margin: auto;
-  padding: 50rpx;
+  padding-top: 50rpx;
 }
 
 .bm_image {
@@ -82,4 +82,44 @@
 .student_age {
   margin: auto !important;
   width: 85%;
+}
+
+.contact_student {
+  border-bottom: 1px solid #ccc;
+}
+
+/* 底部支付 */
+
+.footer_pay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100rpx;
+  display: flex;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px -3px 10px 0px rgba(246, 221, 214, 1);
+}
+
+.pay_price {
+  width: 63%;
+  line-height: 100rpx;
+  text-align: right;
+  font-size: 40rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(240, 92, 92, 1);
+  background: linear-gradient(0deg, rgba(240, 92, 92, 1) 0%, rgba(253, 104, 61, 1) 89.892578125%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparen;
+}
+
+.pay_btn {
+  width: 260rpx;
+  height: 100rpx;
+  background: linear-gradient(90deg, rgba(240, 92, 92, 1), rgba(253, 104, 61, 1));
+  color: #fff;
+  line-height: 100rpx;
+  position: absolute;
+  right: 0;
 }

@@ -17,15 +17,15 @@
 
   <!-- 联系方式 -->
 
-  <i-panel title="联系电话" i-class="contact_student">
-    <i-input value="{{ value6 }}" type="number" right title="联系电话" mode="wrapped" placeholder="请填写学员电话" />
+  <i-panel title="联系电话" class="contact_student">
+    <i-input maxlength="11" value="{{ value6 }}" type="number" right title="联系电话" mode="wrapped" bind:change="phone" placeholder="请填写学员电话" />
   </i-panel>
 
-  <i-panel title="学员姓名">
-    <i-input value="{{ value6 }}" type="text" right title="学员姓名" mode="wrapped" placeholder="请填写学员姓名" />
+  <i-panel title="学员姓名" lass="contact_student">
+    <i-input maxlength="10" bind:change="name" value="{{ value7 }}" type="text" right title="学员姓名" mode="wrapped" placeholder="请填写学员姓名" />
   </i-panel>
 
-  <i-panel class="cell-panel-demo">
+  <i-panel class="cell-panel-demo contact_student">
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
       <view class="picker">
         <i-cell i-class="student_age" bindtap="accSet" title="学员年龄" is-link value="{{array[index]}}">
@@ -34,4 +34,13 @@
     </picker>
   </i-panel>
 
+  <i-panel title="订单备注" lass="contact_student">
+    <i-input bind:change="content" maxlength="30" value="{{ value8 }}" type="text" right title="订单备注" mode="wrapped" placeholder="选填,请写额外需要给老师的信息" />
+  </i-panel>
+
+  <!-- 底部支付 -->
+  <view class="footer_pay">
+    <view class="pay_price">¥10.00</view>
+    <button class="pay_btn"  bindtap="orderPay">支付</button>
+  </view>
 </view>

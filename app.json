@@ -4,6 +4,7 @@
     "pages/recruit/recruit",
     "pages/home/courseInfo/courseInfo",
     "pages/home/courseInfo/placeOrder/placeOrder",
+    "pages/home/courseInfo/orderPay/orderPay",
     "pages/index/index",
     "pages/person/person",
     "pages/person/orderList/orderList",

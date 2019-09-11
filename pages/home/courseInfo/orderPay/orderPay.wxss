@@ -1,0 +1,162 @@
+/* pages/home/courseInfo/placeOrder/placeOrder.wxss */
+
+.baoming {
+  width: 100%;
+  height: 100%;
+}
+
+.baoming_head {
+  font-size: 30rpx;
+  color: #000;
+  padding-left: 5%;
+}
+
+.bm_content {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding-top: 50rpx;
+}
+
+.bm_image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.bm_image image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.bg_nav {
+  padding-left: 20rpx;
+  height: 150rpx;
+}
+
+.shop_detail {
+  width: 500rpx;
+  height: 110rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(17, 17, 17, 1);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.price_wrap {
+  display: flex;
+  justify-content: space-between;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.price_wrap text {
+  font-size: 35rpx;
+}
+
+.price_wrap text:first-child {
+  text-decoration: line-through;
+  font-size: 40rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(17, 17, 17, 1);
+  background: linear-gradient(0deg, rgba(240, 92, 92, 1) 0%, rgba(253, 104, 61, 1) 89.892578125%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.price_wrap text:last-child {
+  padding-left: 30rpx;
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  text-decoration: line-through;
+  color: rgba(169, 169, 169, 1);
+}
+
+.student_age {
+  margin: auto !important;
+  width: 85%;
+}
+
+.contact_student {
+  border-bottom: 1px solid #ccc;
+}
+
+/* 底部支付 */
+
+.footer_pay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100rpx;
+  display: flex;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px -3px 10px 0px rgba(246, 221, 214, 1);
+}
+
+.pay_price {
+  width: 63%;
+  line-height: 100rpx;
+  text-align: right;
+  font-size: 40rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(240, 92, 92, 1);
+  background: linear-gradient(0deg, rgba(240, 92, 92, 1) 0%, rgba(253, 104, 61, 1) 89.892578125%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparen;
+}
+
+.pay_btn {
+  width: 260rpx;
+  height: 100rpx;
+  background: linear-gradient(90deg, rgba(240, 92, 92, 1), rgba(253, 104, 61, 1));
+  color: #fff;
+  line-height: 100rpx;
+  position: absolute;
+  right: 0;
+}
+
+.contact {
+  padding-top: 60rpx;
+}
+
+.time_out {
+  width: 100%;
+  height: 200rpx;
+}
+
+.time_out image {
+  width: 100%;
+  height: 200rpx;
+}
+
+.time_wrap {
+  width: 250rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding-top: 49rpx;
+  padding-left: 75rpx;
+}
+
+.time_wrap text:first-child {
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+
+.time_wrap text:last-child {
+  font-size: 50rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+}

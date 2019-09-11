@@ -10,7 +10,7 @@
     <view class="swiper_foot">
       <text class="swiper_price">￥10.00</text>
       <view class="jtpt">
-        <i-icon size="22" type="dynamic_fill" />阶梯拼团
+        (限时优惠)
       </view>
       <view class="shuxian">
         |
@@ -49,6 +49,25 @@
     <view class="content_nav">
       <text>
     东方吉欧我抚摸外面发送到，寸，我穆克拉方面来看待付款吗咖啡吗哦马上阿萨德安抚
+    东方吉欧我抚摸外面发送到，寸，我穆克拉方面来看待付款吗咖啡吗哦马上阿萨德安抚
+    东方吉欧我抚摸外面发送到，寸，我穆克拉方面来看待付款吗咖啡吗哦马上阿萨德安抚
+    东方吉欧我抚摸外面发送到，寸，我穆克拉方面来看待付款吗咖啡吗哦马上阿萨德安抚
+    东方吉欧我抚摸外面发送到，寸，我穆克拉方面来看待付款吗咖啡吗哦马上阿萨德安抚
+    东方吉欧我抚摸外面发送到，寸，我穆克拉方面来看待付款吗咖啡吗哦马上阿萨德安抚
+    东方吉欧我抚摸外面发送到，寸，我穆克拉方面来看待付款吗咖啡吗哦马上阿萨德安抚
+    </text>
+    </view>
+  </view>
+
+  <!-- 机构介绍 -->
+  <view class="ccjs_content">
+    <view class="ccjs_head">
+      <text>|</text>
+      <text>机构介绍</text>
+    </view>
+    <view class="content_nav">
+      <text>
+    东方吉欧我抚摸外面发送到，寸，我穆克拉方面来看待付款吗咖啡吗哦马上阿萨德安抚
     </text>
     </view>
   </view>
@@ -77,21 +96,21 @@
   </view> -->
 
   <!-- 底部tab -->
-  <view class='foot' style='margin-bottom:{{btuBottom}}'>
+  <view class='foot' style='padding-bottom:{{btuBottom}}'>
     <view class='foot_wrap'>
       <view class='icon'>
         <view>
           <text class="iconfont icon-shouye"></text>
-          <text>首页</text>
+          <text class="shouye">首页</text>
         </view>
         <text class="shuxian2">|</text>
         <view>
-        <text class="iconfont icon-gouwuchekong"></text>
-        <text>客服</text>
+          <text class="iconfont icon-gouwuchekong"></text>
+          <text class="kefu">客服</text>
         </view>
       </view>
       <view>
-        <text class='btn_buy' bindtap="placeOrder">￥10.00购买</text>
+        <button class='btn_buy' bindtap="placeOrder">￥10.00购买</button>
       </view>
     </view>
   </view>

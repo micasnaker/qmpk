@@ -6,12 +6,45 @@ Page({
    */
   data: {
     array: ['美国', '中国', '巴西', '日本'],
+    value6: '',
+    value7: '',
+    value7: ''
   },
 
   bindPickerChange: function(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       index: e.detail.value
+    })
+  },
+
+  // 学员手机号
+  phone: function(event) {
+    this.setData({
+      phone: event.detail.detail.value
+    })
+    console.log(this.data.phone)
+  },
+
+  // 学员姓名
+  name: function(event) {
+    this.setData({
+      name: event.detail.detail.value
+    })
+    console.log(this.data.name)
+  },
+
+  // 备注信息
+  content: function(event) {
+    this.setData({
+      content: event.detail.detail.value
+    })
+    console.log(this.data.content)
+  },
+
+  orderPay(){
+    wx.navigateTo({
+      url: '/pages/home/courseInfo/orderPay/orderPay',
     })
   },
 

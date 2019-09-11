@@ -8,7 +8,7 @@
         <!-- piker 地区二级联动选择器 -->
         <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
           <!-- 当前选择 -->
-          <view>
+          <view class="dingwei">
             {{multiArray[1][multiIndex[1]]}}
             <i-icon type="unfold" />
           </view>
@@ -44,11 +44,16 @@
     <view class="course_text">本地课程</view>
     <scroll-view scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-left="{{scrollTop}}">
       <view class="scroll-x">
-        <view wx:for-items="{{scrolls}}" wx:key="name">
+        <view class="shadow" wx:for-items="{{scrolls}}" wx:key="name">
           <view id="{{item.tag}}" class="course_wrap">
-            <image src="../../images/s1.png"></image>
+            <image src="../../images/qietu/home/daxiang1.png"></image>
             <view class="ellipsi">夏尔丹艺术中心艺术中心</view>
             <view class="course_money">定金￥9.9</view>
+            <image class="xsyh" src="../../images/qietu/home/xsyh.png"></image>
+            <image class="fuli" src="../../images/qietu/home/fuli.png"></image>
+            <image class="top1 top" style="display:none" src="../../images/qietu/home/top1.png"></image>
+            <image class="top2 top" style="display:none" src="../../images/qietu/home/top2.png"></image>
+            <image class="top3 top" style="display:none" src="../../images/qietu/home/top3.png"></image>
           </view>
         </view>
       </view>
@@ -64,6 +69,7 @@
         <view class="hot_top">
           <view class="hot_bg">
             <image lazy-load="true" src="{{item.img}}"></image>
+            <image class="xsyh2" src="../../images/qietu/home/xsyh.png"></image>
           </view>
           <view class="hot_content">
             <text class="content_nav">云艺书法绘画培训团购活动</text>
