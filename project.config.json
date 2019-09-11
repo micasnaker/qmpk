@@ -56,15 +56,22 @@
 				},
 				{
 					"id": -1,
+					"name": "个人信息",
+					"pathName": "pages/person/personInfo/personInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
 					"name": "商品详情",
-					"pathName": "pages/home/goodsInfo/goodsInfo",
+					"pathName": "pages/home/courseInfo/courseInfo",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "个人信息",
-					"pathName": "pages/person/personInfo/personInfo",
+					"name": "报名",
+					"pathName": "pages/home/courseInfo/placeOrder/placeOrder",
 					"query": "",
 					"scene": null
 				}

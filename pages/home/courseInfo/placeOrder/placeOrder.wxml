@@ -1,0 +1,37 @@
+<view class="baoming">
+  <text class="baoming_head">云艺书法绘画培训优惠活动</text>
+  <view class="bm_content">
+    <view class="bm_image">
+      <image src="https://upload-images.jianshu.io/upload_images/3301720-db890fabf626e0ac.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240"></image>
+    </view>
+    <view>
+      <view class="bg_nav">
+        <text class="shop_detail">商品描述.. 阿萨德asdas党纪国法氪金啊北大法宝so已八艘一巴士发布是爱上d撒大声发给违法.....</text>
+        <view class="price_wrap">
+          <text>￥10.00</text>
+          <text>￥1840.00</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 联系方式 -->
+
+  <i-panel title="联系电话" i-class="contact_student">
+    <i-input value="{{ value6 }}" type="number" right title="联系电话" mode="wrapped" placeholder="请填写学员电话" />
+  </i-panel>
+
+  <i-panel title="学员姓名">
+    <i-input value="{{ value6 }}" type="text" right title="学员姓名" mode="wrapped" placeholder="请填写学员姓名" />
+  </i-panel>
+
+  <i-panel class="cell-panel-demo">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        <i-cell i-class="student_age" bindtap="accSet" title="学员年龄" is-link value="{{array[index]}}">
+        </i-cell>
+      </view>
+    </picker>
+  </i-panel>
+
+</view>

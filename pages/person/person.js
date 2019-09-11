@@ -9,7 +9,8 @@ Page({
   data: {
     memberInfo: [],
     user_info: {},
-    guessList: []
+    guessList: [],
+    tabbar: {},
   },
 
   // 拿到用户信息
@@ -99,6 +100,8 @@ Page({
   onLoad: function(options) {
     this.getMemberInfo();
     this.getGuessLikeList();
+    //调用app中的函数
+    app.changeTabBar();
   },
 
   /**

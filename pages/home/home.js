@@ -1,5 +1,6 @@
 // pages/home/home.js
 const api = require("../../utils/request.js");
+const app = getApp();
 var that
 var list = []
 Page({
@@ -9,10 +10,58 @@ Page({
    */
   data: {
     bannerList: [],
+    tabbar: {},
+    courseList: [{
+        img: 'https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=2054200063,2971341766&fm=85&s=5605970C066A72B59A33B5860300A0AB'
+      },
+      {
+        img: 'https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=2054200063,2971341766&fm=85&s=5605970C066A72B59A33B5860300A0AB'
+      },
+      {
+        img: 'https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=2054200063,2971341766&fm=85&s=5605970C066A72B59A33B5860300A0AB'
+      },
+      {
+        img: 'https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=2054200063,2971341766&fm=85&s=5605970C066A72B59A33B5860300A0AB'
+      },
+      {
+        img: 'https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=2054200063,2971341766&fm=85&s=5605970C066A72B59A33B5860300A0AB'
+      },
+      {
+        img: 'https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=2054200063,2971341766&fm=85&s=5605970C066A72B59A33B5860300A0AB'
+      },
+    ],
     indicatorDots: false,
     autoplay: true,
     interval: 5000,
     duration: 1000,
+    toView: 'yellow',
+    scrollLeft: 0,
+    //滚动的数组
+    scrolls: [{
+        name: 'yellow',
+        tag: 'yellow',
+      },
+      {
+        name: 'green',
+        tag: 'green',
+      },
+      {
+        name: 'red',
+        tag: 'red',
+      },
+      {
+        name: 'yellow',
+        tag: 'yellow',
+      },
+      {
+        name: 'green',
+        tag: 'green',
+      },
+      {
+        name: 'red',
+        tag: 'red',
+      },
+    ],
     // 定位初始值
     multiIndex: [0, 0],
     multiArray: [
@@ -2418,6 +2467,8 @@ Page({
 
   onLoad: function(options) {
     that = this
+    //调用app中的函数
+    app.changeTabBar();
     // 首页banner
     this.getHomeBanners();
     // 定位权限
@@ -2474,21 +2525,13 @@ Page({
             city: city.indexOf('市') > -1 ? city.substr(0, city.indexOf('市')) : city,
             province: province.indexOf('省') > -1 ? province.substr(0, province.indexOf('省')) : province,
           });
-          // 省下标
-          // for (var j = 0; j < that.data.multiArray[0].length; j++) {
-          //   // console.log(that.data.multiArray[0][j])
-          //   if (that.data.multiArray[0][j] == that.data.province) {
-          //     console.log(j + "j")
-          //     that.setData({
-          //       multiIndex1: j
-          //     })
-          //   }
-          // }
-
           // wx.setStorage({
           //   key: "city",
           //   data: that.data.city
           // })
+          // var a = that.data.multiArray;
+          // a.push(that.data.city)
+          // console.log(a + "a")
           try {
             wx.setStorageSync('city', that.data.city)
           } catch (e) {
@@ -2500,14 +2543,19 @@ Page({
                 if (res.confirm) {
                   console.log('确定')
                   // 重新获取定位
-                  this.loadCity();
+                  that.getLocation();
+                  that.loadCity();
                 } else if (res.cancel) {
                   console.log('取消')
                 }
               }
             })
           }
+          var resetOut = setTimeout(function() {
+            that.onLoad()
+          }, 1000)
           console.log("定位城市：" + that.data.city)
+          clearInterval(resetOut)
         } else {
           that.setData({
             city: '获取失败'
@@ -2548,6 +2596,41 @@ Page({
     }
   },
 
+  // 本地课程横向滚动
+  scrollToRed: function(e) {
+    this.setData({
+      toView: 'green'
+    })
+  },
+  scrollTo100: function(e) {
+    this.setData({
+      scrollLeft: 100
+    })
+  },
+
+  scroll: function(e) {
+    // console.log(e)
+  },
+
+  //下拉刷新
+  onPullDownRefresh: function() {
+    wx.showNavigationBarLoading() //在标题栏中显示加载
+
+    //模拟加载
+    setTimeout(function() {
+      // complete
+      wx.hideNavigationBarLoading() //完成停止加载
+      wx.stopPullDownRefresh() //停止下拉刷新
+    }, 1500);
+  },
+
+  // 课程详情
+  courseDetail() {
+    wx.navigateTo({
+      url: '/pages/home/courseInfo/courseInfo'
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -2558,8 +2641,22 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
-
+  onShow: function(e) {
+    this.setData({
+      msgList: [{
+          url: "url",
+          title: "多地首套房贷利率上浮 热点城市渐迎零折扣时代"
+        },
+        {
+          url: "url",
+          title: "交了20多年的国内漫游费将取消 你能省多少话费？"
+        },
+        {
+          url: "url",
+          title: "北大教工合唱团出国演出遇尴尬:被要求给他人伴唱"
+        }
+      ]
+    });
   },
 
   /**

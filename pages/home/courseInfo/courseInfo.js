@@ -9,8 +9,8 @@ Page({
   data: {
     btuBottom: "",
     goodsInfo: [],
-    indicatorDots: true,
-    autoplay: true,
+    indicatorDots: false,
+    autoplay: false,
     interval: 5000,
     duration: 1000,
     current: 'tab1',
@@ -91,6 +91,13 @@ Page({
           duration: 1000
         })
       }
+    })
+  },
+
+  // 下单
+  placeOrder() {
+    wx.navigateTo({
+      url: '/pages/home/courseInfo/placeOrder/placeOrder',
     })
   },
 

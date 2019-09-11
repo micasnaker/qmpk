@@ -1,0 +1,98 @@
+<!--pages/home/goodsInfo/goodsInfo.wxml-->
+<view class='goodsInfo'>
+  <!-- 轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="item in 3" wx:key="index" data-id="{{item.id}}" data-index="{{index}}">
+      <swiper-item>
+        <image src="https://upload-images.jianshu.io/upload_images/3301720-db890fabf626e0ac.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240" class="slide-image" />
+      </swiper-item>
+    </block>
+    <view class="swiper_foot">
+      <text class="swiper_price">￥10.00</text>
+      <view class="jtpt">
+        <i-icon size="22" type="dynamic_fill" />阶梯拼团
+      </view>
+      <view class="shuxian">
+        |
+      </view>
+      <view class="jzsj">
+        截止时间
+        <text>2019</text>年
+        <text>12</text>月
+        <text>31</text>日
+      </view>
+    </view>
+  </swiper>
+
+  <!-- 课程抬头 -->
+  <view class="cour_content">
+    <view>
+      <text class="cour_text">云艺书法绘画培训团购活动</text>
+      <view class="cc_wrap">
+        <text>惊爆价</text>
+        <text>￥10.00</text>
+        <text>￥1840.00</text>
+      </view>
+    </view>
+    <view class="btn_fx">
+      <text>|</text>
+      <i-icon size="28" type="accessory" />
+    </view>
+  </view>
+
+  <!-- 课程介绍 -->
+  <view class="ccjs_content">
+    <view class="ccjs_head">
+      <text>|</text>
+      <text>课程介绍</text>
+    </view>
+    <view class="content_nav">
+      <text>
+    东方吉欧我抚摸外面发送到，寸，我穆克拉方面来看待付款吗咖啡吗哦马上阿萨德安抚
+    </text>
+    </view>
+  </view>
+
+  <!-- 标签栏 -->
+  <!-- <view class='tab'>
+    <i-tabs current="{{ current }}" bindchange="handleChange">
+      <i-tab key="tab1" title="商品介绍"></i-tab>
+      <i-tab key="tab2" title="商品参数"></i-tab>
+      <i-tab key="tab3" title="购买须知"></i-tab>
+    </i-tabs>
+    <view class='tab_wrap'>
+
+      <view class='wrap' wx:if="{{tab1}}">
+        <text>{{goodsInfo.product_description}}</text>
+      </view>
+
+      <view class='wrap' wx:if="{{tab2}}">
+        <text>{{goodsInfo.product_parameter}}</text>
+      </view>
+
+      <view class='wrap' wx:if="{{tab3}}">
+        <text>{{goodsInfo.product_notes}}</text>
+      </view>
+    </view>
+  </view> -->
+
+  <!-- 底部tab -->
+  <view class='foot' style='margin-bottom:{{btuBottom}}'>
+    <view class='foot_wrap'>
+      <view class='icon'>
+        <view>
+          <text class="iconfont icon-shouye"></text>
+          <text>首页</text>
+        </view>
+        <text class="shuxian2">|</text>
+        <view>
+        <text class="iconfont icon-gouwuchekong"></text>
+        <text>客服</text>
+        </view>
+      </view>
+      <view>
+        <text class='btn_buy' bindtap="placeOrder">￥10.00购买</text>
+      </view>
+    </view>
+  </view>
+</view>

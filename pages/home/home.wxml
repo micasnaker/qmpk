@@ -19,6 +19,17 @@
       <button class="p_btn" bindtap="tryPosition">重新定位</button>
     </view>
   </view>
+  <!-- 文字轮播 -->
+  <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="3000">
+    <block wx:for="{{msgList}}">
+      <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate">
+        <swiper-item>
+          <view class="swiper_item">{{item.title}}</view>
+        </swiper-item>
+      </navigator>
+    </block>
+  </swiper>
+
   <!-- 轮播图 -->
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{bannerList}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}">
@@ -28,4 +39,48 @@
     </block>
   </swiper>
 
+  <!-- 本地课程 -->
+  <view class="local_course">
+    <view class="course_text">本地课程</view>
+    <scroll-view scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-left="{{scrollTop}}">
+      <view class="scroll-x">
+        <view wx:for-items="{{scrolls}}" wx:key="name">
+          <view id="{{item.tag}}" class="course_wrap">
+            <image src="../../images/s1.png"></image>
+            <view class="ellipsi">夏尔丹艺术中心艺术中心</view>
+            <view class="course_money">定金￥9.9</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 全国热门 -->
+  <!-- 本地课程 -->
+  <view class="local_course">
+    <view class="course_text">全国热门</view>
+    <view class="nav_hot">
+      <view class="hot_wrap" bindtap="courseDetail" wx:for="{{courseList}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}">
+        <view class="hot_top">
+          <view class="hot_bg">
+            <image lazy-load="true" src="{{item.img}}"></image>
+          </view>
+          <view class="hot_content">
+            <text class="content_nav">云艺书法绘画培训团购活动</text>
+            <view class="content_price">
+              <text>定金￥10.00</text>
+              <text>￥1840.00</text>
+            </view>
+          </view>
+        </view>
+        <view class="hot_foot">
+          <text>1376人正在关注，快来拼一单吧</text>
+          <button id="pt_btn">去拼团</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- tabbar -->
+  <import src="../template/template.wxml" />
+  <template is="tabbar" data="{{tabbar}}" />
 </view>
