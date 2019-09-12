@@ -10,6 +10,10 @@ Page({
     current: 'tab1',
     current_scroll: 'tab1',
     tab1: true,
+    tab2: false,
+    tab3: false,
+    tab4: false,
+    tab5: false,
     orderList:[],
     guessList:[],
     obligationList:[],
@@ -196,6 +200,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    var that = this;
     // 全部订单
     this.getOrderList();
     // 猜你喜欢
@@ -208,6 +213,26 @@ Page({
     this.getDeliverOrderList();
     // 待评价订单
     this.getEvaluateOrderList();
+    // 我的页面 三栏选择 跳转订单 高亮
+    if(options.tabShow2){
+      this.setData({
+        tab2: options.tabShow2,
+        tab1:false,
+        current:'tab2'
+      })
+    } else if (options.tabShow3){
+      this.setData({
+        tab3: options.tabShow3,
+        tab1: false,
+        current: 'tab3'
+      })
+    } else if (options.tabShow5){
+      this.setData({
+        tab5: options.tabShow5,
+        tab1: false,
+        current: 'tab5'
+      })
+    }
   },
 
   /**

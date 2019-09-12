@@ -3,7 +3,6 @@
 /* 个人头像名称 */
 
 .person {
-  margin-top: 5%;
   background-color: #f4f4f4;
 }
 
@@ -21,7 +20,7 @@
   position: absolute;
   margin-left: 150rpx;
   top: 0;
-  margin-top: 70rpx;
+  margin-top: 30rpx;
   width: 160rpx;
 }
 
@@ -100,6 +99,10 @@
 
 .order_wrap {
   margin-top: 20rpx;
+}
+
+.order_wrap:nth-child(odd){
+  width: 30%  
 }
 
 .order_status text:first-child {

@@ -87,6 +87,7 @@
     </view>
   </view>
   <!-- tabbar -->
-  <import src="../template/template.wxml" />
-  <template is="tabbar" data="{{tabbar}}" />
+  <!-- <import src="../template/template.wxml" />
+  <template is="tabbar" data="{{tabbar}}" /> -->
+
 </view>

@@ -1,0 +1,150 @@
+/* pages/person/orderList/orderList.wxss */
+
+page {
+  background-color: #e9e9ea;
+}
+
+/* 购物车为空时 */
+
+.empty {
+  text-align: center;
+  padding: 80rpx 20rpx;
+}
+
+.empty text:first-child {
+  color: #000;
+  font-size: 18px;
+}
+
+.empty text {
+  color: #9d9d9d;
+  font-size: 15px;
+  font-family: PingFangSC-regular;
+}
+
+/* 订单列表 */
+
+.have{
+  margin-bottom: 20%;
+}
+
+.have_wrap {
+  height: 280rpx;
+  width: 86%;
+  padding: 20rpx 20rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.hava_head {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20rpx;
+}
+
+.have_nav {
+  width: 450rpx;
+  padding-left: 30rpx;
+}
+
+.hava_head text:first-child {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(17, 17, 17, 1);
+}
+
+.hava_head text:last-child {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(17, 17, 17, 1);
+  background: linear-gradient(0deg, rgba(240, 92, 92, 1) 0%, rgba(253, 104, 61, 1) 89.892578125%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-right: 20rpx;
+}
+
+.hava_content {
+  display: flex;
+  padding-top: 20rpx;
+}
+
+.nav_price {
+  display: block;
+  height: 40rpx;
+  text-align: right;
+  line-height: 40rpx;
+}
+
+.nav_price text:first-child {
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  text-decoration: line-through;
+  color: rgba(169, 169, 169, 1);
+  padding-right: 10rpx;
+}
+
+.nav_price text:last-child {
+  font-size: 40rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(17, 17, 17, 1);
+  background: linear-gradient(0deg, rgba(240, 92, 92, 1) 0%, rgba(253, 104, 61, 1) 89.892578125%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.student_info {
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(17, 17, 17, 1);
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.student_info text {
+  text-align: right;
+  float: right;
+}
+
+.order_num {
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(17, 17, 17, 1);
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.order_num text {
+  text-align: right;
+  float: right;
+}
+
+.order_time {
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(17, 17, 17, 1);
+  height: 4rpx;
+  line-height: 40rpx;
+}
+
+.order_time text {
+  text-align: right;
+  float: right;
+}
+
+.have_img {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.have_wrap image {
+  width: 150rpx;
+  height: 150rpx;
+}

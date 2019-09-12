@@ -13,6 +13,42 @@ Page({
     tabbar: {},
   },
 
+  // 退出登录
+  logout() {
+    wx.showModal({
+      title: '提示',
+      content: '是否确定退出?',
+      success(res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+
+  // 待付款
+  waitPay(){
+    wx.navigateTo({
+      url: '/pages/person/orderList/orderList?tabShow2='+true,
+    })
+  },
+
+  // 已付款
+  accountPay() {
+    wx.navigateTo({
+      url: '/pages/person/orderList/orderList?tabShow3=' + true,
+    })
+  },
+
+  // 已失效
+  losePay() {
+    wx.navigateTo({
+      url: '/pages/person/orderList/orderList?tabShow5=' + true,
+    })
+  },
+
   // 拿到用户信息
   getMemberInfo() {
     var that = this;

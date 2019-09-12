@@ -1,5 +1,5 @@
 <!--pages/recruit/recruit.wxml-->
 <text>pages/recruit/recruit.wxml</text>
 <!-- tabbar -->
-<import src="../template/template.wxml" />
-<template is="tabbar" data="{{tabbar}}" />
+<!-- <import src="../template/template.wxml" />
+<template is="tabbar" data="{{tabbar}}" /> -->

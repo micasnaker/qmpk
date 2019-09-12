@@ -1,5 +1,9 @@
 /* pages/person/orderList/orderList.wxss */
 
+page {
+  background-color: #e9e9ea;
+}
+
 /* 购物车为空时 */
 
 .empty {
@@ -20,19 +24,133 @@
 
 /* 订单列表 */
 
+.have {
+  margin-bottom: 20%;
+}
+
 .have_wrap {
-  height: 100%;
+  height: 334rpx;
   width: 86%;
   padding: 20rpx 20rpx;
   margin: 0 auto;
-  display: flex;
+  background-color: #fff;
+  margin-top: 20rpx;
 }
 
-.have_wrap text {
-  font-size: 13px;
-  font-family: PingFangSC-regular;
-  color: #101010;
-  line-height: 80rpx;
+.hava_head {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20rpx;
+}
+
+.have_nav {
+  width: 450rpx;
+  padding-left: 30rpx;
+}
+
+.hava_head text:first-child {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(17, 17, 17, 1);
+}
+
+.hava_head text:last-child {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(17, 17, 17, 1);
+  background: linear-gradient(0deg, rgba(240, 92, 92, 1) 0%, rgba(253, 104, 61, 1) 89.892578125%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-right: 20rpx;
+}
+
+.hava_content {
+  display: flex;
+  padding-top: 20rpx;
+}
+
+.nav_price {
+  display: block;
+  height: 40rpx;
+  text-align: right;
+  line-height: 40rpx;
+}
+
+.nav_price text:first-child {
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  text-decoration: line-through;
+  color: rgba(169, 169, 169, 1);
+  padding-right: 10rpx;
+}
+
+.nav_price text:last-child {
+  font-size: 40rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(17, 17, 17, 1);
+  background: linear-gradient(0deg, rgba(240, 92, 92, 1) 0%, rgba(253, 104, 61, 1) 89.892578125%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.student_info {
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(17, 17, 17, 1);
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.student_info text {
+  text-align: right;
+  float: right;
+}
+
+.order_num {
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(17, 17, 17, 1);
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.order_num text {
+  text-align: right;
+  float: right;
+}
+
+.order_time {
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(17, 17, 17, 1);
+  height: 4rpx;
+  line-height: 40rpx;
+}
+
+.order_time text {
+  text-align: right;
+  float: right;
+}
+
+.time_pay {
+  width: 258rpx;
+  height: 58rpx;
+  background: linear-gradient(90deg, rgba(240, 92, 92, 1), rgba(253, 104, 61, 1));
+  border-radius: 29rpx;
+  line-height: 58rpx;
+  float: right;
+  margin-top: 30rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
 }
 
 .content {
@@ -47,76 +165,12 @@
   float: right;
 }
 
-.have_wrap image {
+.have_img {
   width: 150rpx;
   height: 150rpx;
 }
 
-/* 猜你喜欢商品列表 */
-
-.newest-title {
-  width: 100%;
-  padding: 30rpx 0;
-  height: 40rpx;
-  color: #ab956d;
-  text-align: center;
-}
-
-.newest-box {
-  padding: 0 40rpx;
-}
-
-.newest-box .newest-list {
-  display: inline-block;
-  width: 325rpx;
-  margin: 0 20rpx 20rpx 0;
-  border-radius: 10px;
-  text-align: center;
-  background: #f4f4f4;
-  padding-bottom: 3%;
-}
-
-.newest-box .newest-list:nth-child(2n) {
-  margin-right: 0;
-}
-
-.newest-box .newest-list image {
-  width: 175rpx;
-  height: 175rpx;
-  margin: 20rpx 0 10rpx;
-}
-
-.newest-box .newest-list .newest-text {
-  font-size: 28rpx;
-}
-
-.price {
-  display: flex;
-  justify-content: space-around;
-}
-
-.price text:first-child {
-  color: rgba(162, 49, 62, 1);
-  font-size: 17px;
-}
-
-.price text:last-child {
-  text-decoration: line-through;
-  color: rgba(102, 100, 102, 1);
-}
-
-.print {
-  display: flex;
-  justify-content: space-around;
-  margin-left: 20rpx;
-  color: #666466;
-}
-
-.print text:last-child {
-  font-size: 12px;
-  background-color: #e51c23;
-  color: #fff;
-  font-family: Microsoft Yahei;
-  border-radius: 5px;
-  width: 120rpx;
+.have_wrap image {
+  width: 150rpx;
+  height: 150rpx;
 }
